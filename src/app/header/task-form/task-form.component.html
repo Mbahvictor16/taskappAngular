@@ -1,0 +1,32 @@
+<div class="backdrop"></div>
+<dialog open>
+  <form (ngSubmit)="OnSubmit()">
+    <p *ngIf="taskError" [class.error]="taskError">
+      Title or Description cannot be empty
+    </p>
+    <div>
+      <label for="task-title">Title</label><br />
+      <input
+        type="text"
+        id="task-title"
+        [(ngModel)]="task.title"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+
+    <div>
+      <label for="task-description">Description</label><br />
+      <textarea
+        id="task-description"
+        [(ngModel)]="task.description"
+        [ngModelOptions]="{ standalone: true }"
+        rows="5"
+      ></textarea>
+    </div>
+
+    <div>
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit">Create task</button>
+    </div>
+  </form>
+</dialog>

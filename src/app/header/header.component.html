@@ -1,0 +1,13 @@
+<header>
+  <h1>Tasks</h1>
+
+  <div>
+    <button (click)="onAddTask()">Add Task</button>
+  </div>
+
+  <app-task-form
+    *ngIf="isAddingTask"
+    (add)="onSubmitForm()"
+    (cancel)="cancelAdd()"
+  />
+</header>

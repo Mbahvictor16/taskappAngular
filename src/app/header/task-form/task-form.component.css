@@ -1,0 +1,40 @@
+form {
+  margin-top: 40px;
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+dialog {
+  margin: auto;
+  width: min(90%, 500px);
+  background: rgb(1, 19, 43);
+  border: 1px solid rgb(1, 19, 43);
+  color: #fff;
+}
+
+input,
+textarea {
+  width: 90%;
+}
+
+input,
+button {
+  font-size: 1.5rem;
+  padding: 4px 8px;
+}
+
+button {
+  font-weight: bold;
+}
+
+.error {
+  color: #ff0000;
+}
